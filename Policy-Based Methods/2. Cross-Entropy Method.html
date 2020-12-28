@@ -13017,64 +13017,6 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
-<style type="text/css">
-    
-/* Temporary definitions which will become obsolete with Notebook release 5.0 */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-bold { font-weight: bold; }
-
-    </style>
-<style type="text/css">
-    body[data-notebook-name] > #header #header-container:not(.show-panel), /* body has data-notebook-name attribute when 
-a notebook is open. this rule won't be applied when the notebook is not open (in 404 view for example) */
-body[data-notebook-name] #menubar-container #maintoolbar:not(.show-panel),
-body[data-notebook-name] #menubar-container ul.navbar-nav:not(.show-panel) {
-  display: none;
-}
-
-#menubar.only-panel #menus.navbar-default {
-    background: #fff;
-    border-color: #fff;
-}
-
-.toolbar.with-statusbar{
-    margin-top: 3px;
-    margin-bottom: 0;
-}
-
-    </style>
 
 
 <style type="text/css">
@@ -13108,7 +13050,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -13150,20 +13092,20 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">gym</span>
 <span class="kn">import</span> <span class="nn">math</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">deque</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">deque</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
 
 <span class="kn">import</span> <span class="nn">torch</span>
 <span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
 <span class="kn">import</span> <span class="nn">torch.nn.functional</span> <span class="k">as</span> <span class="nn">F</span>
-<span class="kn">from</span> <span class="nn">torch.autograd</span> <span class="k">import</span> <span class="n">Variable</span>
+<span class="kn">from</span> <span class="nn">torch.autograd</span> <span class="kn">import</span> <span class="n">Variable</span>
 
 <span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s2">&quot;cuda:0&quot;</span> <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="k">else</span> <span class="s2">&quot;cpu&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
@@ -13195,18 +13137,18 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Python Virtual Display only works on Mac and Linux</span>
 <span class="o">!</span>python -m pip install pyvirtualdisplay
-<span class="kn">from</span> <span class="nn">pyvirtualdisplay</span> <span class="k">import</span> <span class="n">Display</span>
+<span class="kn">from</span> <span class="nn">pyvirtualdisplay</span> <span class="kn">import</span> <span class="n">Display</span>
 <span class="n">display</span> <span class="o">=</span> <span class="n">Display</span><span class="p">(</span><span class="n">visible</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">1400</span><span class="p">,</span> <span class="mi">900</span><span class="p">))</span>
 <span class="n">display</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
 
 <span class="n">is_ipython</span> <span class="o">=</span> <span class="s1">&#39;inline&#39;</span> <span class="ow">in</span> <span class="n">plt</span><span class="o">.</span><span class="n">get_backend</span><span class="p">()</span>
 <span class="k">if</span> <span class="n">is_ipython</span><span class="p">:</span>
-    <span class="kn">from</span> <span class="nn">IPython</span> <span class="k">import</span> <span class="n">display</span>
+    <span class="kn">from</span> <span class="nn">IPython</span> <span class="kn">import</span> <span class="n">display</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>
 </pre></div>
@@ -13225,12 +13167,8 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Collecting pyvirtualdisplay
-  Downloading https://files.pythonhosted.org/packages/d0/8a/643043cc70791367bee2d19eb20e00ed1a246ac48e5dbe57bbbcc8be40a9/PyVirtualDisplay-1.3.2-py2.py3-none-any.whl
-Collecting EasyProcess (from pyvirtualdisplay)
-  Downloading https://files.pythonhosted.org/packages/48/3c/75573613641c90c6d094059ac28adb748560d99bd27ee6f80cce398f404e/EasyProcess-0.3-py2.py3-none-any.whl
-Installing collected packages: EasyProcess, pyvirtualdisplay
-Successfully installed EasyProcess-0.3 pyvirtualdisplay-1.3.2
+<pre>Requirement already satisfied: pyvirtualdisplay in /home/adrian/anaconda3/lib/python3.7/site-packages (1.3.2)
+Requirement already satisfied: EasyProcess in /home/adrian/anaconda3/lib/python3.7/site-packages (from pyvirtualdisplay) (0.3)
 </pre>
 </div>
 </div>
@@ -13250,7 +13188,7 @@ Successfully installed EasyProcess-0.3 pyvirtualdisplay-1.3.2
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;MountainCarContinuous-v0&#39;</span><span class="p">)</span>
@@ -13279,14 +13217,12 @@ Successfully installed EasyProcess-0.3 pyvirtualdisplay-1.3.2
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre><span class="ansi-yellow-fg">WARN: gym.spaces.Box autodetected dtype as &lt;class &#39;numpy.float32&#39;&gt;. Please provide explicit dtype.</span>
-<span class="ansi-yellow-fg">WARN: gym.spaces.Box autodetected dtype as &lt;class &#39;numpy.float32&#39;&gt;. Please provide explicit dtype.</span>
-observation space: Box(2,)
-  - low: [-1.20000005 -0.07      ]
-  - high: [ 0.60000002  0.07      ]
-action space: Box(1,)
+<pre>observation space: Box(-1.2000000476837158, 0.6000000238418579, (2,), float32)
+  - low: [-1.2  -0.07]
+  - high: [0.6  0.07]
+action space: Box(-1.0, 1.0, (1,), float32)
   - low: [-1.]
-  - high: [ 1.]
+  - high: [1.]
 </pre>
 </div>
 </div>
@@ -13304,14 +13240,14 @@ action space: Box(1,)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Agent</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
     
     <span class="sd">&quot;&quot;&quot;Agent used to solve MountainCartContinuous-V0&quot;&quot;&quot;</span>
     
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">env</span><span class="p">,</span> <span class="n">hidden_size</span> <span class="o">=</span> <span class="mi">16</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">env</span><span class="p">,</span> <span class="n">hidden_size</span> <span class="o">=</span> <span class="mi">16</span><span class="p">):</span>
         
         <span class="nb">super</span><span class="p">(</span><span class="n">Agent</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span> <span class="c1">#Inherit nn.Module class</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">env</span> <span class="o">=</span> <span class="n">env</span>
@@ -13391,7 +13327,7 @@ action space: Box(1,)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">agent</span> <span class="o">=</span> <span class="n">Agent</span><span class="p">(</span><span class="n">env</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
@@ -13565,7 +13501,7 @@ Environment solved in 147 iterations!	Average Score: 90.83
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># load the weights from file</span>
@@ -13590,6 +13526,28 @@ Environment solved in 147 iterations!	Average Score: 90.83
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
 </div>
 </div>
 
