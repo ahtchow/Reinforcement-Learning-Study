@@ -41,7 +41,7 @@ class Agent:
         # Q-Network - Local, Neural Net for Target
         self.qnetwork_local = QNetwork(state_size, action_size, seed).to(device)
         self.qnetwork_target = QNetwork(state_size, action_size, seed).to(device)
-        # Use same optimizer for both neural network
+        # Optimizer for Local Neural Net
         self.optimizer = optim.Adam(self.qnetwork_local.parameters(), lr=LR)
 
         # Replay memory
