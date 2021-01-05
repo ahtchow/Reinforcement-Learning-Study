@@ -1,0 +1,3 @@
+Q-Prop: Sample-Efficient Policy Gradient with An Off-Policy Critic - https://arxiv.org/abs/1611.02247
+High-Dimensional Continuous Control Using Generalized Advantage Estimation - https://arxiv.org/abs/1506.02438
+Continuous control with deep reinforcement learning - https://arxiv.org/abs/1509.02971
