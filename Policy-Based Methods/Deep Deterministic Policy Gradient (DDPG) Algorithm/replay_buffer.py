@@ -39,7 +39,7 @@ class ReplayBuffer:
         states = torch.from_numpy(states).float().to(self.device) # (float)
 
         actions = np.vstack([e.action for e in experiences if e is not None])
-        actions = torch.from_numpy(actions).long().to(self.device) # (long)
+        actions = torch.from_numpy(actions).float().to(self.device) # (float)
 
         rewards = np.vstack([e.reward for e in experiences if e is not None])
         rewards = torch.from_numpy(rewards).float().to(self.device) # (float)
